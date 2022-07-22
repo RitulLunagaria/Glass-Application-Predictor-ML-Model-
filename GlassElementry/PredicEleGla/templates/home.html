@@ -1,0 +1,165 @@
+{% load static %}
+<!Doctype html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Dosis:wght@300;700&family=El+Messiri:wght@700&family=Orbitron:wght@600&family=Poppins:wght@400;500;600&family=Rubik+Moonrocks&family=Signika:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Dosis:wght@300;700&family=El+Messiri:wght@700&family=Orbitron:wght@600&family=Poppins:wght@400;500;600&family=Signika:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>
+
+    </title>
+    <style>
+   body {
+  background-image: url('static/m1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.ab{margin-left:70%;
+  margin-top:-520px;
+  }
+
+  .input-group{margin-left:0%;
+
+  width:100px;}
+
+    </style>
+</head>
+<body>
+  <div class="row" >
+<h1  style="color:rgb(255, 255, 255);margin-top:15px;text-shadow:0px 5px 15px  rgb(148, 255, 140); text-align: center; font-size: 100px;font-family: 'Rubik Moonrocks', cursive;">Glass Predictor</h1>
+  </div>
+  <br><br>
+<div class="row" style="background-color: rgba(255, 0, 0, 0.5);">
+  <marquee style="color: rgb(255, 242, 0); ">*This is Machine learning based web app where it will predict the applications of glass based on element composition give by user! 
+  </marquee>
+</div>
+  
+<form  action="{% url 'result' %}">
+  {% csrf_token %}
+<div class="container" style="font-family: 'Comfortaa',cursive;box-shadow:0px 1px 10px rgb(0, 208, 255); background-color:rgba(2, 78, 94, 0.5);margin-top: 10px; border: 2px solid white; border-radius: 10px;">
+
+<div class="info">
+<br>
+  <strong style="color:white ;">Attribute Information:</strong>  
+  <ul style="color:white ;margin-top: 10px;">
+    <li><b>RI: refractive index</b></li>
+      <li>Na: Sodium (unit measurement:weight % in corresponding oxide,as are attributes 4-10)</li>
+        <li>Mg: Magnesium</li>
+          <li>Al: Aluminum</li>
+            <li>Si: Silicon</li>
+              <li>K: Potassium</li>
+                <li>Ca: Calcium</li>
+                  <li>Ba: Barium</li>
+                    <li>Fe: Iron</li>
+                  </ul>
+                    <br>
+                    <br>
+<strong style="color:red; ">Type of glass: (class attribute)</strong>
+<ol  style="color:rgb(139, 203, 0);">
+<li>building windows float processed </li> 
+<li>building windows nonfloat processed </li> 
+  <li>vehicle windows float processed</li> 
+    <li>vehicle windows nonfloat processed (none in this database)</li> 
+      <li>Containers</li> 
+        <li>Table ware</li> 
+          <li>Head lamps</li> 
+</ol>
+  
+</div>
+<div class="ab">
+  <span style="color:rgb(139, 203, 0);font-size: 30px;"><b>Input here:</b></span>
+  <p style="color: red;">( *Input can be in float & integer. )</p>
+  <br>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="color: rgb(4, 116, 131);">RI</span>
+        </div>
+        <input type="text" class="form-control" required name='RI' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: rgb(255, 247, 0);color: rgb(148, 144, 21);">Na</span>
+        </div>
+        <input type="text" class="form-control"  required name='Na' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: black;  color: rgb(255, 255, 255);">Mg</span>
+        </div>
+        <input type="text" class="form-control"  required name='Mg' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: #595959;  color:#b1b1b1;">Al</span>
+        </div>
+        <input type="text" class="form-control"  required name='Al'  placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style=color:#ffffff;">Si</span>
+        </div>
+        <input type="text" class="form-control"  required name='Si' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"  style="background-color: #cb67cb;  color:#cab7ca;">K</span>
+        </div>
+        <input type="text" class="form-control"  required name='K' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: #952405;  color:#ff451c;">Ca</span>
+        </div>
+        <input type="text" class="form-control"  required name='Ca' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: #319804;  color:#3cf033;">Ba</span>
+        </div>
+        <input type="text" class="form-control"  required name='Ba'  placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1" style="background-color: #774d00;  color:#ff8c08;">Fe</span>
+        </div>
+        <input type="text" class="form-control"  required name='Fe' placeholder="unit" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+
+<div>
+
+  <button type="submit" class="btn btn-info" style="font-family: 'Comfortaa', cursive;color:white ;text-shadow:0px 2px 5px black;margin-left:84%;margin-top: 10px;">FIND
+
+  </button>
+</div>
+
+    </form>
+    <br><br><br>
+
+</body>
+<footer>
+  <div class="row" style="font-family: 'Comfortaa', cursive;background-color: rgba(0, 0, 0, 0.744);color:rgba(255, 255, 255, 0.76);text-align: center;height: 90px;">
+  <span style="margin-top: 30px;">Developed By | <b> Ritul Lunagaria </b>| <i style="color: rgb(4, 189, 221);">T R I A N G L E</i></span><br><p>2022</p>
+  </div>
+</footer>
+
+</html>

@@ -1,0 +1,120 @@
+{% load static %}
+<!Doctype html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Dosis:wght@300;700&family=El+Messiri:wght@700&family=Orbitron:wght@600&family=Poppins:wght@400;500;600&family=Signika:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Dosis:wght@300;700&family=El+Messiri:wght@700&family=Orbitron:wght@600&family=Poppins:wght@400;500;600&family=Rubik+Moonrocks&family=Signika:wght@400;700&display=swap" rel="stylesheet">
+    <title>
+ML|TRIANGLE
+    </title>
+    <style>
+body {
+  background-image: url({% static "m5.jpg" %});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.ab{
+    text-align:center;
+  
+  
+}
+.hi{
+    color: white;
+    font-size: 32px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+
+}
+
+    </style>
+</head>
+<body>
+<div class="row" >                
+   <h1  style="color:rgb(255, 255, 255);margin-top:15px;text-shadow:0px 5px 15px  rgb(148, 255, 140); text-align: center; font-size: 100px;font-family: 'Rubik Moonrocks', cursive;">Glass Predictor</h1>
+</div>
+<br>
+<br>
+    <div class="row" style="background-color: rgba(255, 0, 0, 0.5);">
+         <marquee style="color: rgb(255, 242, 0); ">*This is Machine learning based web app where it will predict the applications of glass based on element composition give by user! 
+         </marquee>
+    </div>
+  
+
+  
+<div class="container" style="background-color:rgba(2, 78, 94, 0.5);margin-top: 10px; border: 2px solid white; border-radius: 10px;height: 400px;">
+<br>
+<br>
+  <h3 style=" text-shadow:0px 2px 5px black;color: white ;font-family: 'Comfortaa', cursive;"><u>Result for mixture</u> -</h3>
+
+<div class="ab">
+                                    <span style="color:rgb(139, 203, 0);font-size: 30px;"><b></span>
+                                    <br>
+                                    <br>
+                                    {% if ans == 1 %}
+                                        <div class="hi">
+                                            <span>This Composition of glass  is used for<i> Building windows float processed.</i></span>
+                                            </div>
+                                        
+
+                                        {% elif ans == 2 %}
+                                        <div class="hi" >
+                                            <span>This Composition of glass  is used for<i> Building windows nonfloat processed.</i></span>
+                                            </div>
+                                    
+
+                                        {% elif ans == 3 %}
+                                        <div class="hi">
+                                            <p>This Composition of glass  is used for<i> vehicle windows float processed.</i> </p>
+                                            </div>
+                                        
+
+                                        {% elif ans == 4 %}
+                                        <div class="hi" >
+                                            <span>This Composition of glass  is used for<i> vehicle windows nonfloat processed (none in this database).</i></span>
+                                            </div>
+                                    
+
+                                        {% elif ans == 5 %}
+                                        <div class="hi">
+                                            <span>This Composition of glass  is used for<i> containers.</i></span>
+                                            </div>
+                                    
+
+                                        {% elif ans == 6 %}
+                                        <div class="hi">
+                                            <span>This Composition of glass  is used for<i> Table ware.</i></span>
+                                            </div>
+                                    
+
+                                        {% elif ans == 7 %}
+                                        <div class="hi" >
+                                            <p>This Composition of glass  is used for<i> Head lamps for vehicles.</i></p>
+                                            </div>
+                                    {% endif %}
+
+</div>
+
+</div>
+
+
+
+<div>
+  <button  class="btn btn-info" style="color:white ;margin-left:89%;margin-top: 10px;"><a
+    href="{% url 'home' %}" style="font-family: 'Comfortaa', cursive;text-decoration: none;color: azure;text-shadow: 0px 2px 5px black;">Home</a>
+</button>
+</div>
+    <br>
+    <br>
+    <br>
+
+</body>
+<footer>
+  <div class="row" style="font-family: 'Comfortaa', cursive;background-color: rgba(0, 0, 0, 0.744);color:rgba(255, 255, 255, 0.76);text-align: center;height: 90px;">
+  <span style="margin-top: 30px;">Developed By | <b> Ritul Lunagaria </b>| <i style="color: rgb(4, 189, 221);">T R I A N G L E</i></span>
+  </div>
+</footer>
+
+</html>
